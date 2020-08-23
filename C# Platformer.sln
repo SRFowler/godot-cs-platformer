@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C# Platformer", "C# Platformer.csproj", "{37A1195A-8FB6-4AB8-96A2-C13D8539F7ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37A1195A-8FB6-4AB8-96A2-C13D8539F7ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A1195A-8FB6-4AB8-96A2-C13D8539F7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37A1195A-8FB6-4AB8-96A2-C13D8539F7ED}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{37A1195A-8FB6-4AB8-96A2-C13D8539F7ED}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{37A1195A-8FB6-4AB8-96A2-C13D8539F7ED}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{37A1195A-8FB6-4AB8-96A2-C13D8539F7ED}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

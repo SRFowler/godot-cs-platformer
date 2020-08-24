@@ -62,6 +62,7 @@
     <Compile Include="src\Actors\Enemy.cs" />
     <Compile Include="src\Actors\Player.cs" />
     <Compile Include="src\Objects\Coin.cs" />
+    <Compile Include="src\Objects\Portal2D.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

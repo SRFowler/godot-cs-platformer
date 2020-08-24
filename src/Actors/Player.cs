@@ -9,7 +9,7 @@ public class Player : Actor
         Vector2 direction = GetDirection();
 
         velocity = CalculateMoveVelocity(velocity, direction, speed, isJumpInterrupted);
-        velocity = MoveAndSlide(velocity, Vector2.Up);
+        velocity = MoveAndSlide(velocity, FloorNormal);
 
         // Any time you override a method and want to call the parent method use this
         // base._PhysicsProcess(delta);

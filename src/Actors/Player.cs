@@ -5,9 +5,10 @@ public class Player : Actor
  
      public override void _PhysicsProcess(float delta)
     {
+        bool isJumpInterrupted = Input.IsActionJustReleased("jump") & velocity.y < 0.0;
         Vector2 direction = GetDirection();
 
-        velocity = CalculateMoveVelocity(velocity, direction, speed);
+        velocity = CalculateMoveVelocity(velocity, direction, speed, isJumpInterrupted);
         velocity = MoveAndSlide(velocity, Vector2.Up);
 
         // Any time you override a method and want to call the parent method use this
@@ -26,7 +27,8 @@ public class Player : Actor
      private Vector2 CalculateMoveVelocity(
           Vector2 linearVelocity, 
           Vector2 direction,
-          Vector2 speed)
+          Vector2 speed,
+          bool isJumpInterrupted)
      {
           Vector2 newVelocity = velocity;
           newVelocity.x = speed.x * direction.x;
@@ -34,6 +36,11 @@ public class Player : Actor
           if (direction.y == -1.0)
           {
                newVelocity.y = speed.y * direction.y;
+          }
+
+          if (isJumpInterrupted)
+          {
+               newVelocity.y = 0;
           }
           return newVelocity;
      }

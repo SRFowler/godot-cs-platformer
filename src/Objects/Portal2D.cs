@@ -9,6 +9,11 @@ public class Portal2D : Area2D
 
     private AnimationPlayer animPlayer;
 
+    private void OnBodyEntered(PhysicsBody2D body)
+    {
+        Teleport();
+    }
+
     public override void _Ready()
     {
         animPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
@@ -23,7 +28,6 @@ public class Portal2D : Area2D
     {
         animPlayer.Play("fadeIn");
         await ToSignal(animPlayer, "animation_finished");
-        GD.Print("Ding!");
-        //GetTree().ChangeSceneTo(nextScene);
+        GetTree().ChangeSceneTo(nextScene);
     }
 }

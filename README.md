@@ -2,7 +2,12 @@
 ## Godot platformer made using C#
 
 Project is a C# implementation of GDQuest ["Make Your First 2D Game with Godot"](https://www.youtube.com/watch?v=Mc13Z2gboEk).  
-Continue from ~16 minutes
+- Video one is 100% complete and implemented.  
+
+Continuing to [Video Two](https://www.youtube.com/watch?v=6ziIyx60N6I)  
+**Adds:**  
+- Coins  
+- Portals between levels  
 
 
 ### Notes  

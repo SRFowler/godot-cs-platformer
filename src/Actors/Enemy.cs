@@ -9,7 +9,7 @@ public class Enemy : Actor
         {
             return;
         }
-        GetNode<CollisionShape2D>("CollisionShape2D").Disabled = true;
+        //GetNode<CollisionShape2D>("CollisionShape2D").Disabled = true;
         QueueFree();
     }
 

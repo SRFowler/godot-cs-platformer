@@ -5,6 +5,7 @@ public class Enemy : Actor
 
     public override void _Ready()
     {
+        SetPhysicsProcess(false);
         velocity.x = -speed.x;
     }
 

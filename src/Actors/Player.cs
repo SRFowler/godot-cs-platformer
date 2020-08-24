@@ -11,6 +11,11 @@ public class Player : Actor
           velocity = CalculateStompVelocity(velocity, _stompImpusle);
      }
 
+     private void OnEnemyDetectorBodyEntered(PhysicsBody2D body)
+     {
+          QueueFree();
+     }
+     
      public override void _PhysicsProcess(float delta)
     {
         bool isJumpInterrupted = Input.IsActionJustReleased("jump") & velocity.y < 0.0;

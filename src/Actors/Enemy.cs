@@ -9,6 +9,16 @@ public class Enemy : Actor
         velocity.x = -speed.x;
     }
 
+    private void OnStompDetectorBodyEntered(PhysicsBody2D body)
+    {
+        if(body.GlobalPosition.y > GetNode<Area2D>("StompDetector").GlobalPosition.y)
+        {
+            return;
+        }
+        GetNode<CollisionShape2D>("CollisionShape2D").Disabled = true;
+        QueueFree();
+    }
+
     public override void _PhysicsProcess(float delta)
     {
         velocity.y += gravity * delta;

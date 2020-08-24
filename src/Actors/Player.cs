@@ -2,7 +2,15 @@ using Godot;
 
 public class Player : Actor
 {
+
+     [Export]
+     private float _stompImpusle = 1000.0f;
  
+     private void OnEnemyDetectorAreaEntered(Area2D area)
+     {
+          velocity = CalculateStompVelocity(velocity, _stompImpusle);
+     }
+
      public override void _PhysicsProcess(float delta)
     {
         bool isJumpInterrupted = Input.IsActionJustReleased("jump") & velocity.y < 0.0;
@@ -44,4 +52,13 @@ public class Player : Actor
           }
           return newVelocity;
      }
+
+     private Vector2 CalculateStompVelocity(Vector2 linearVelocity, float impulse)
+     {
+          /// Returns a Vector2 to 'bounce' back from a stomp
+          Vector2 newVelocity = linearVelocity;
+          newVelocity.y = -impulse;
+          return newVelocity;
+     }
+
 }
